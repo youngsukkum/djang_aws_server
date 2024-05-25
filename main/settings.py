@@ -75,36 +75,13 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # sqlite3 DB 사용
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# mysql DB 사용
-# DATABASES = {
-#     'default':{
-#         'ENGINE' : 'django.db.backends.mysql', # mysql orm engine
-#         'NAME' : 'test', # DB 이름
-#         'USER' : 'root', # 사용자 이름
-#         'PASSWORD' : '1234', # 암호
-#         'HOST' : 'localhost', # 127.0.0.1, 서버 아이피 또는 도메인이름
-#         'PORT' : '3306', # DB 연결 포트
-#     }
-# }
-
-# oracle DB 사용
 DATABASES = {
-    'default':{
-        'ENGINE' : 'django.db.backends.oracle', # mysql orm engine
-        'NAME' : 'XE', # DB 이름
-        'USER' : 'system', # 사용자 이름
-        'PASSWORD' : 'oracle', # 암호
-        'HOST' : 'localhost', # 127.0.0.1, 서버 아이피 또는 도메인이름
-        'PORT' : '1521', # DB 연결 포트
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
