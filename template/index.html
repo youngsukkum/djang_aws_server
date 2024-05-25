@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+</head>
+<body>
+    <!--
+        index.html, index.htm, index.jsp, index.php 
+        메인 페이지의 페이지 이름
+    -->
+    {% load static %}
+    <img src="{% static 'daum.png' %}" width="100px" height="100px">
+    <img src="{% static 'image/naver.png' %}" width="100px" height="100px">
+    <img src="{% static 'img/google.png' %}" width="100px" height="100px">
+    강사 메인 index 페이지 입니다.<br>
+    
+    {{ user }}<br>
+    {{ user.is_active }}
+    <hr>
+    {% if user.is_active %}
+        {{ user }}님 환영 합니다. 
+        <button><a href='{% url "logout" %}'>로그아웃</a></button>
+        <button><a href='{% url "PB:I" %}'>목록보기</a></button>
+        <button><a href='{% url "myinfo" %}'>내정보</a></button>
+    {% else %}
+        <button><a href="{% url 'login' %}">로그인</a></button>
+        <button><a href="{% url 'create' %}">회원가입</a></button>
+    {% endif %}
+</body>
+</html>
